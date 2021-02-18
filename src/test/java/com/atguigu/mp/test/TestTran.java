@@ -27,7 +27,7 @@ public class TestTran {
 	}
 	/**3、外围有事务且有异常，里面有两个添加方法*/
 	@Test
-	public void t3() {
+	public void t3() throws Exception {
 		tranSrvice.exception_required_required();
 	}
 	
@@ -35,6 +35,14 @@ public class TestTran {
 	@Test
 	public void t4() {
 		tranSrvice.required_requiredNew_requiredNewException();
+	}
+	@Test
+	public void t4_1(){
+		tranSrvice.required_requiredNewException();
+	}
+	@Test
+	public void t4_2(){
+		tranSrvice.required_tryRequiredNewException();
 	}
 	/**5、*/
 	@Test

@@ -13,11 +13,17 @@ public interface TranService {
 	/**
 	 * 3、外围有事务且有异常，里面有两个添加方法，不论外围有异常，还是其他方法有异常，全都回滚
 	 */
-	void exception_required_required();
+	void exception_required_required() throws Exception;
 	/**
 	 * 4、外围有事务且有异常，里面有两个添加方法，不论外围有异常，还是其他方法有异常，全都回滚
 	 */
 	void required_requiredNew_requiredNewException();
+
+	/**
+	 * 4.1、
+	 */
+	void required_requiredNewException();
+	void required_tryRequiredNewException();
 	/**
 	 * 5、外围有事务且有异常，里面有两个添加方法，不论外围有异常，还是其他方法有异常，全都回滚
 	 */
